@@ -1,0 +1,79 @@
+$fonts-path: "../fonts";
+$img-path: "../img";
+
+$page-width-mobile: 320px;
+$page-max-width-mobile: 450px;
+$page-width-tablet: 768px;
+$page-width-desktop: 1440px;
+$page-width-mobile-second: $page-width-mobile + 1px;
+$page-width-mobile-last: $page-width-tablet - 1px;
+$page-width-tablet-last: $page-width-desktop - 1px;
+
+$page-max-height-mobile: 280px;
+$page-max-height-tablet: 480px;
+
+$page-padding-mobile: 25px;
+$page-padding-tablet: 40px;
+$page-padding-desktop: 60px;
+
+$menu-height-mobile: 73px;
+$menu-height-tablet: 132px;
+$menu-height-desktop: 90px;
+
+$transitions-duration: 0.15s;
+
+$color-basic-black: #000000;
+$color-basic-blue: #161c35;
+$color-basic-grey: #edeff6;
+$color-basic-white: #ffffff;
+$color-basic-yellow: #ffd74b;
+
+$color-special-blue-200: #365094;
+$color-special-blue-300: #132576;
+$color-special-blue-400: #1d2e5b;
+$color-special-blue-500: #192144;
+$color-special-blue-600: #182044;
+$color-special-blue-700: #141b3b;
+$color-special-blue-800: #101d41;
+$color-special-blue-900: #121936;
+
+$color-special-green-500: #81e31e;
+
+$color-special-grey-100: #f3f4f8;
+$color-special-grey-150: #f2f2f2;
+$color-special-grey-175: #e5e3df;
+$color-special-grey-200: #e1e3e9;
+$color-special-grey-250: #e6e8f1;
+$color-special-grey-300: #e5e5e5;
+$color-special-grey-325: #e2e5f1;
+$color-special-grey-350: #e2e5f2;
+$color-special-grey-400: #dfe3f0;
+$color-special-grey-425: #d9d9d9;
+$color-special-grey-450: #d6d9e6;
+$color-special-grey-500: #d6daed;
+$color-special-grey-550: #d4d9eb;
+$color-special-grey-600: #d1d7e9;
+$color-special-grey-625: #c8cee8;
+$color-special-grey-650: #cccccc;
+$color-special-grey-700: #cbced9;
+$color-special-grey-725: #b2b2b2;
+$color-special-grey-750: #afb0b5;
+$color-special-grey-775: #aeb4cb;
+$color-special-grey-800: #999999;
+$color-special-grey-850: #959bb2;
+$color-special-grey-900: #444444;
+
+$color-special-orange-400: #ffa530;
+$color-special-orange-500: #ff8d30;
+$color-special-orange-600: #f26926;
+$color-special-orange-700: #ff5c23;
+
+$color-special-red-200: #ffefef;
+$color-special-red-300: #f9eaea;
+$color-special-red-400: #f9d8d8;
+$color-special-red-500: #f47e7e;
+$color-special-red-600: #f97676;
+$color-special-red-700: #ff0000;
+
+$color-special-yellow-500: #ffbd30;
+$color-special-yellow-600: #f3c72b;

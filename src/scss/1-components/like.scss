@@ -1,0 +1,138 @@
+.like {
+  --like-icon-size: 30px;
+
+  display: flex;
+  align-items: flex-start;
+  padding: 0;
+
+  @media (min-width: $page-width-tablet) {
+    --like-icon-size: 50px;
+  }
+}
+
+.like__button {
+  position: relative;
+
+  min-height: var(--like-icon-size);
+  padding: 0;
+  padding-left: calc(var(--like-icon-size) + 7px);
+  border: none;
+
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: $color-basic-blue;
+  text-align: left;
+  text-transform: uppercase;
+
+  background: none;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: var(--like-icon-size);
+    height: var(--like-icon-size);
+    border-radius: 50%;
+
+    background-color: $color-special-grey-350;
+
+    transition-property: background-color;
+    transition-duration: $transitions-duration;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: var(--like-icon-size);
+    height: var(--like-icon-size);
+    border-radius: 50%;
+
+    background-image: url("#{$img-path}/like/like-heart-empty.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40% 40%;
+
+    opacity: 0.3;
+
+    transition-property: opacity;
+    transition-duration: $transitions-duration;
+
+    pointer-events: none;
+  }
+
+  &:hover {
+    &::before {
+      background-color: $color-special-grey-325;
+    }
+
+    &::after {
+      opacity: 0.5;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: $color-special-grey-325;
+    }
+
+    &::after {
+      opacity: 0.1;
+
+      transition: none;
+    }
+  }
+
+  &--liked {
+    &::before {
+      background-color: $color-special-red-300;
+    }
+
+    &::after {
+      background-image: url("#{$img-path}/like/like-heart.svg");
+
+      opacity: 1;
+    }
+
+    &:hover {
+      &::before {
+        background-color: $color-special-red-400;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      &::before {
+        background-color: $color-special-red-400;
+      }
+
+      &::after {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  @media (min-width: $page-width-tablet) {
+    font-size: 20px;
+    line-height: 20px;
+
+    padding-left: calc(var(--like-icon-size) + 6px);
+  }
+
+  @media (min-width: $page-width-desktop) {
+    padding-left: calc(var(--like-icon-size) + 7px);
+  }
+}

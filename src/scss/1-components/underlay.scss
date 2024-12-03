@@ -1,0 +1,85 @@
+.underlay {
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+
+    background-color: $color-basic-grey;
+  }
+
+  &--top::after {
+    top: -70px;
+    bottom: 100%;
+  }
+
+  &--yellow::after {
+    background-color: $color-basic-yellow;
+  }
+
+  &--blue::after {
+    background-color: $color-special-blue-500;
+  }
+
+  &--metallic::after {
+    background-color: $color-special-grey-400;
+  }
+
+  &--dark-metallic::after {
+    background-color: $color-special-grey-550;
+  }
+
+  &--countries-filter::after {
+    background-color: $color-special-grey-325;
+  }
+
+  &--promo::after {
+    display: none;
+  }
+
+  &--companions::after {
+    background-color: $color-special-grey-250;
+  }
+
+  &--not-found::after {
+    background-color: $color-basic-blue;
+  }
+
+  @media (min-width: $page-width-tablet) {
+    &--companions::after {
+      background-color: $color-basic-grey;
+    }
+
+    &--not-found::after {
+      background-color: $color-special-blue-600;
+    }
+  }
+
+  @media (min-width: $page-width-desktop) {
+    &--countries-filter.underlay--countries-filter-open::after {
+      background-color: $color-basic-grey;
+    }
+
+    &--promo::after {
+      display: block;
+    }
+
+    &--not-found::after {
+      background-color: $color-basic-blue;
+    }
+  }
+}
+
+.no-js .underlay {
+  @media (min-width: $page-width-desktop) {
+    &--countries-filter::after {
+      background-color: $color-basic-grey;
+    }
+  }
+}
